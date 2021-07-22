@@ -36,7 +36,7 @@ string sum(string a, string b)
     int size = max(a.length(), b.length());
     int lenA = a.length()-1;
     int lenB = b.length()-1;
-    for (int i = 0; i < size;i++) // chua dung <-
+    for (int i = 0; i < size;i++) 
     {
         if (lenA>= i && lenB >= i)
         {
