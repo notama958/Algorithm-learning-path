@@ -1,0 +1,23 @@
+# VERY simple basic test of all commands in categories A and B
+# Test all commands from category A
+read "A-simpletest-in.txt" silent
+# Test all commands from category B
+path_inbeam_longest Agn
+total_color Srn
+total_color Agn
+clear_fibres
+all_xpoints
+fibres (0,0)
+add_fibre (2,2) (5,3) 5
+all_fibres
+all_xpoints
+fibres (2,2)
+fibres (5,3)
+add_fibre (3,6) (5,3) 3
+all_fibres
+route_any (2,2) (3,6)
+# Remove fibre and test again
+remove_fibre (5,3) (2,2)
+route_any (2,2) (3,6)
+all_fibres
+all_xpoints

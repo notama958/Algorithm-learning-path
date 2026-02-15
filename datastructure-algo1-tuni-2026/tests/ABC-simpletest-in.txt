@@ -1,0 +1,11 @@
+# VERY simple basic test of all commands in categories A, B, and C
+# Test all commands from categories A and B
+read "AB-simpletest-in.txt" silent
+# Add more fibres
+add_fibre (2,2) (5,3) 5
+add_fibre (3,6) (2,2) 10
+# Test all commands from category C
+route_least_xpoints (2,2) (3,6)
+route_fastest (2,2) (3,6)
+route_fibre_cycle (2,2)
+all_fibres

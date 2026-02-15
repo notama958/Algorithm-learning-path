@@ -1,0 +1,18 @@
+# Test with a bigger set of data and categories A and B
+# Test all commands from category A
+read "A-biggertest-in.txt" silent
+# Test all commands from category B
+path_inbeam_longest BlueLagoon
+path_inbeam_longest Bouquet
+path_inbeam_longest VenetianRed
+path_inbeam_longest GreyAsparagus
+total_color BlueLagoon
+total_color VenetianRed
+total_color Bouquet
+total_color FreeSpeechRed
+read "bigger-fibres.txt"
+route_any (2,12) (8,24)
+fibres (14,24)
+remove_fibre (10,24) (14,24)
+fibres (14,24)
+route_any (2,12) (8,24)

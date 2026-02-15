@@ -1,0 +1,3 @@
+add_beacon xCAFE testBeacon (10,40) (5,15,30)
+beacon_count
+beacon_info xCAFE

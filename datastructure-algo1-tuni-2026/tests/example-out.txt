@@ -1,0 +1,164 @@
+> # A operations
+> clear_beacons
+Cleared all beacons
+> beacon_count
+Number of beacons: 0
+> read "example-beacons.txt"
+** Commands from 'example-beacons.txt'
+> # Add beacons
+> add_beacon G1 Lime (0,0) (0,255,0)
+Beacon:
+  Lime: pos=(0,0), color=(0,255,0)1530, id=G1
+> add_beacon M1 Fuchsia (6,0) (255,0,255)
+Beacon:
+  Fuchsia: pos=(6,0), color=(255,0,255)1020, id=M1
+> add_beacon R1 Crimson (1,6) (220,20,60)
+Beacon:
+  Crimson: pos=(1,6), color=(220,20,60)840, id=R1
+> add_beacon B2 Teal (11, 10) (0,128,128)
+Beacon:
+  Teal: pos=(11,10), color=(0,128,128)896, id=B2
+> add_beacon M2 Indigo (10, 4) (75,0,130)
+Beacon:
+  Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+> 
+** End of commands from 'example-beacons.txt'
+> beacon_count
+Number of beacons: 5
+> beacon_info M1
+Beacon:
+  Fuchsia: pos=(6,0), color=(255,0,255)1020, id=M1
+> sort_alpha
+Beacons:
+1. Crimson: pos=(1,6), color=(220,20,60)840, id=R1
+2. Fuchsia: pos=(6,0), color=(255,0,255)1020, id=M1
+3. Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+4. Lime: pos=(0,0), color=(0,255,0)1530, id=G1
+5. Teal: pos=(11,10), color=(0,128,128)896, id=B2
+> min_brightness
+Beacon:
+  Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+> max_brightness
+Beacon:
+  Lime: pos=(0,0), color=(0,255,0)1530, id=G1
+> sort_brightness
+Beacons:
+1. Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+2. Crimson: pos=(1,6), color=(220,20,60)840, id=R1
+3. Teal: pos=(11,10), color=(0,128,128)896, id=B2
+4. Fuchsia: pos=(6,0), color=(255,0,255)1020, id=M1
+5. Lime: pos=(0,0), color=(0,255,0)1530, id=G1
+> change_name M1 Indigo
+Beacon:
+  Indigo: pos=(6,0), color=(255,0,255)1020, id=M1
+> find_beacons Indigo
+Beacons:
+1. Indigo: pos=(6,0), color=(255,0,255)1020, id=M1
+2. Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+> read "example-lightbeams.txt"
+** Commands from 'example-lightbeams.txt'
+> # Add light sources
+> add_lightbeam G1 M1
+Added lightbeam: Lime -> Indigo
+> add_lightbeam R1 M2
+Added lightbeam: Crimson -> Indigo
+> add_lightbeam M1 M2
+Added lightbeam: Indigo -> Indigo
+> add_lightbeam M2 B2
+Added lightbeam: Indigo -> Teal
+> 
+** End of commands from 'example-lightbeams.txt'
+> lightsources M2
+beacons:
+1. Indigo: pos=(6,0), color=(255,0,255)1020, id=M1
+2. Crimson: pos=(1,6), color=(220,20,60)840, id=R1
+> path_outbeam R1
+beacons:
+1. Crimson: pos=(1,6), color=(220,20,60)840, id=R1
+2. Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+3. Teal: pos=(11,10), color=(0,128,128)896, id=B2
+> # B operations
+> path_inbeam_longest B2
+beacons:
+1. Lime: pos=(0,0), color=(0,255,0)1530, id=G1
+2. Indigo: pos=(6,0), color=(255,0,255)1020, id=M1
+3. Indigo: pos=(10,4), color=(75,0,130)355, id=M2
+4. Teal: pos=(11,10), color=(0,128,128)896, id=B2
+> total_color B2
+Total color of Teal: (70,88,116)
+Beacon:
+  Teal: pos=(11,10), color=(0,128,128)896, id=B2
+> clear_fibres
+All fibres removed.
+> read "example-fibres.txt"
+** Commands from 'example-fibres.txt'
+> # Add fibres
+> add_fibre (0,0) (6,0) 1
+Added fibre: (0,0) <-> (6,0), cost 1
+> add_fibre (6,0) (10,4) 1
+Added fibre: (6,0) <-> (10,4), cost 1
+> add_fibre (10,4) (6,6) 1
+Added fibre: (10,4) <-> (6,6), cost 1
+> add_fibre (6,6) (11,10) 1
+Added fibre: (6,6) <-> (11,10), cost 1
+> add_fibre (0,0) (1,6) 2
+Added fibre: (0,0) <-> (1,6), cost 2
+> add_fibre (1,6) (6,6) 3
+Added fibre: (1,6) <-> (6,6), cost 3
+> 
+** End of commands from 'example-fibres.txt'
+> all_xpoints
+Coords:
+1. (0,0)
+2. (6,0)
+3. (10,4)
+4. (1,6)
+5. (6,6)
+6. (11,10)
+> fibres (6,6)
+Fibres from (6,6):
+1. (10,4) : 1
+2. (1,6) : 3
+3. (11,10) : 1
+> remove_fibre (6,6) (1,6)
+Removed fibre: (6,6) <-> (1,6)
+> all_fibres
+(0,0) -> (6,0)
+(0,0) -> (1,6)
+(6,0) -> (10,4)
+(10,4) -> (6,6)
+(6,6) -> (11,10)
+> fibres (6,6)
+Fibres from (6,6):
+1. (10,4) : 1
+2. (11,10) : 1
+> route_any (0,0) (11,10)
+1.    (0,0) : 0
+2. -> (6,0) : 1
+3. -> (10,4) : 2
+4. -> (6,6) : 3
+5. -> (11,10) : 4
+> # (Add removed fibre back)
+> add_fibre (1,6) (6,6) 3
+Added fibre: (1,6) <-> (6,6), cost 3
+> # C operations
+> route_least_xpoints (0,0) (11,10)
+1.    (0,0) : 0
+2. -> (1,6) : 2
+3. -> (6,6) : 5
+4. -> (11,10) : 6
+> route_fastest (0,0) (11,10)
+1.    (0,0) : 0
+2. -> (6,0) : 1
+3. -> (10,4) : 2
+4. -> (6,6) : 3
+5. -> (11,10) : 4
+> route_fibre_cycle (11,10)
+0.    (6,6)
+1. -> (10,4)
+2. -> (6,0)
+3. -> (0,0)
+4. -> (1,6)
+5. -> (6,6)
+> 
+> quit

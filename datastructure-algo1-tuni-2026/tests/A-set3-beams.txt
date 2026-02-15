@@ -1,0 +1,48 @@
+add_beacon ed1 a0 (8,8) (189,224,34) 
+add_beacon 3fb a1 (14,15) (187,124,103) 
+add_beacon 1c3b a2 (31,30) (72,78,107) 
+add_beacon ec5 a3 (40,39) (184,214,173) 
+add_beacon 1d6 a4 (50,49) (24,103,254) 
+add_beacon 23f2 a5 (56,58) (88,190,246) 
+add_beacon 8e4 a6 (62,70) (163,253,190) 
+add_beacon 24a6 a7 (76,80) (60,119,24) 
+add_beacon 2067 a8 (84,89) (64,117,57) 
+add_beacon 9c1 a9 (92,92) (246,158,1) 
+add_beacon 2056 b0 (491,6) (186,40,42) 
+add_beacon 104 b1 (480,20) (48,84,163) 
+add_beacon 1144 b2 (477,29) (144,15,132) 
+add_beacon 1fbf b3 (464,39) (186,221,213) 
+add_beacon 681 b4 (451,47) (254,36,147) 
+add_beacon e1 b5 (443,56) (172,137,99) 
+add_beacon 683 b6 (437,67) (150,14,116) 
+add_beacon 6ef b7 (421,75) (164,44,157) 
+add_beacon f33 b8 (411,87) (85,159,18) 
+add_beacon cbb b9 (407,92) (174,55,124) 
+add_beacon fff top (200,110) (99,99,99)
+# 
+add_lightbeam ed1 3fb
+add_lightbeam 3fb 1c3b
+add_lightbeam 1c3b ec5
+add_lightbeam ec5 1d6
+add_lightbeam 1d6 23f2
+add_lightbeam 23f2 8e4
+add_lightbeam 8e4 24a6
+add_lightbeam 24a6 2067
+add_lightbeam 2067 9c1
+add_lightbeam 2056 104
+add_lightbeam 104 1144
+add_lightbeam 1144 1fbf
+add_lightbeam 1fbf 681
+add_lightbeam 681 e1
+add_lightbeam e1 683
+add_lightbeam 683 6ef
+add_lightbeam 6ef f33
+add_lightbeam f33 cbb
+add_lightbeam cbb fff
+add_lightbeam 9c1 fff
+#
+# should be a9 and b9:
+lightsources fff
+#
+# should be all beacons named a? and top:
+path_outbeam ed1

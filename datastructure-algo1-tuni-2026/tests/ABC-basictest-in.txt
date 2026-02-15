@@ -1,0 +1,15 @@
+# Tests with example's beacons with more operations from categories A, B, and C
+# Test all commands from categories A and B
+read "AB-basictest-in.txt" silent
+# Test all commands from category C
+# Read fibres back in
+clear_fibres
+read "example-fibres.txt" silent
+route_least_xpoints (11,10) (0,0)
+route_fastest (11,10) (0,0)
+route_fibre_cycle (11,10)
+add_fibre (6,6) (0,0) 0
+route_least_xpoints (1,6) (10,4)
+route_fastest (1,6) (10,4)
+remove_fibre (6,0) (10,4)
+route_fibre_cycle (10,4)

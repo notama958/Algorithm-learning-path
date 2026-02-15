@@ -1,0 +1,29 @@
+> # VERY simple basic test of all commands in categories A, B, and C
+> # Test all commands from categories A and B
+> read "AB-simpletest-in.txt" silent
+** Commands from 'AB-simpletest-in.txt'
+...(output discarded in silent mode)...
+** End of commands from 'AB-simpletest-in.txt'
+> # Add more fibres
+> add_fibre (2,2) (5,3) 5
+Added fibre: (2,2) <-> (5,3), cost 5
+> add_fibre (3,6) (2,2) 10
+Added fibre: (3,6) <-> (2,2), cost 10
+> # Test all commands from category C
+> route_least_xpoints (2,2) (3,6)
+1.    (2,2) : 0
+2. -> (3,6) : 10
+> route_fastest (2,2) (3,6)
+1.    (2,2) : 0
+2. -> (5,3) : 5
+3. -> (3,6) : 8
+> route_fibre_cycle (2,2)
+0.    (2,2)
+1. -> (5,3)
+2. -> (3,6)
+3. -> (2,2)
+> all_fibres
+(2,2) -> (5,3)
+(2,2) -> (3,6)
+(5,3) -> (3,6)
+> 

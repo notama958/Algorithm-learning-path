@@ -1,0 +1,25 @@
+# Test with a bigger set of data and category A
+clear_beacons
+read "bigger-beacons.txt"
+beacon_count
+sort_alpha
+min_brightness
+max_brightness
+sort_brightness
+find_beacons TyrianPurple
+find_beacons FreeSpeechRed
+read "bigger-lightbeams.txt"
+lightsources FreeSpeechRed
+lightsources Red
+lightsources NoColor
+path_outbeam GreyAsparagus
+path_outbeam Red
+path_outbeam Bouquet
+path_outbeam TyrianPurple
+change_name FreeSpeechRed Red
+change_name VenetianRed Red
+find_beacons Red
+find_beacons FreeSpeechRed
+change_name VenetianRed CopperRust
+find_beacons Red
+find_beacons CopperRust

@@ -1,0 +1,11 @@
+# Test with a bigger set of data and categories A, B, and C
+# Test all commands from categories A and B
+read "AB-biggertest-in.txt" silent
+# Test all commands from category C
+# Test original labyrinth, which should have no cycles
+route_fibre_cycle (20,0)
+# Add extra fibre and test routes
+add_fibre (20,4) (21,2) 100
+route_least_xpoints (20,0) (9,2)
+route_fastest (20,0) (9,2)
+route_fibre_cycle (20,0)

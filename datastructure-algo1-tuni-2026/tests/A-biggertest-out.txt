@@ -1,0 +1,180 @@
+> # Test with a bigger set of data and category A
+> clear_beacons
+Cleared all beacons
+> read "bigger-beacons.txt"
+** Commands from 'bigger-beacons.txt'
+> add_beacon Malachite Malachite (0,0) (0,211,105)
+Beacon:
+  Malachite: pos=(0,0), color=(0,211,105)1371, id=Malachite
+> add_beacon Olive Olive (6,0) (117,117,0)
+Beacon:
+  Olive: pos=(6,0), color=(117,117,0)1053, id=Olive
+> add_beacon VenetianRed VenetianRed (1,6) (193,0,35)
+Beacon:
+  VenetianRed: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> add_beacon Medium Medium (4,4) Blue (37,0,206)
+Invalid parameters for command 'add_beacon'!
+> add_beacon FreeSpeechRed FreeSpeechRed (4,8) (170,25,0)
+Beacon:
+  FreeSpeechRed: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+> add_beacon DarkGreen DarkGreen (9,2) (0,28,21)
+Beacon:
+  DarkGreen: pos=(9,2), color=(0,28,21)189, id=DarkGreen
+> add_beacon Red Red (20,0) (249,8,0)
+Beacon:
+  Red: pos=(20,0), color=(249,8,0)795, id=Red
+> add_beacon TyrianPurple TyrianPurple (0,20) (81,0,16)
+Beacon:
+  TyrianPurple: pos=(0,20), color=(81,0,16)259, id=TyrianPurple
+> add_beacon BlueLagoon BlueLagoon (11,10) (0,101,130)
+Beacon:
+  BlueLagoon: pos=(11,10), color=(0,101,130)736, id=BlueLagoon
+> add_beacon Sangria Sangria (2,12) (145,0,14)
+Beacon:
+  Sangria: pos=(2,12), color=(145,0,14)449, id=Sangria
+> add_beacon CopperRust CopperRust (12,4) (145,72,79)
+Beacon:
+  CopperRust: pos=(12,4), color=(145,72,79)946, id=CopperRust
+> add_beacon FernGreen FernGreen (15, 6) (62,124,64)
+Beacon:
+  FernGreen: pos=(15,6), color=(62,124,64)994, id=FernGreen
+> add_beacon LuckyPoint LuckyPoint (20,20) (38,39,76)
+Beacon:
+  LuckyPoint: pos=(20,20), color=(38,39,76)424, id=LuckyPoint
+> add_beacon Bouquet Bouquet (8,24) (170,133,146)
+Beacon:
+  Bouquet: pos=(8,24), color=(170,133,146)1454, id=Bouquet
+> add_beacon GreyAsparagus GreyAsparagus (25,10) (69,84,65)
+Beacon:
+  GreyAsparagus: pos=(25,10), color=(69,84,65)776, id=GreyAsparagus
+> 
+** End of commands from 'bigger-beacons.txt'
+> beacon_count
+Number of beacons: 14
+> sort_alpha
+Beacons:
+1. BlueLagoon: pos=(11,10), color=(0,101,130)736, id=BlueLagoon
+2. Bouquet: pos=(8,24), color=(170,133,146)1454, id=Bouquet
+3. CopperRust: pos=(12,4), color=(145,72,79)946, id=CopperRust
+4. DarkGreen: pos=(9,2), color=(0,28,21)189, id=DarkGreen
+5. FernGreen: pos=(15,6), color=(62,124,64)994, id=FernGreen
+6. FreeSpeechRed: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+7. GreyAsparagus: pos=(25,10), color=(69,84,65)776, id=GreyAsparagus
+8. LuckyPoint: pos=(20,20), color=(38,39,76)424, id=LuckyPoint
+9. Malachite: pos=(0,0), color=(0,211,105)1371, id=Malachite
+10. Olive: pos=(6,0), color=(117,117,0)1053, id=Olive
+11. Red: pos=(20,0), color=(249,8,0)795, id=Red
+12. Sangria: pos=(2,12), color=(145,0,14)449, id=Sangria
+13. TyrianPurple: pos=(0,20), color=(81,0,16)259, id=TyrianPurple
+14. VenetianRed: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> min_brightness
+Beacon:
+  DarkGreen: pos=(9,2), color=(0,28,21)189, id=DarkGreen
+> max_brightness
+Beacon:
+  Bouquet: pos=(8,24), color=(170,133,146)1454, id=Bouquet
+> sort_brightness
+Beacons:
+1. DarkGreen: pos=(9,2), color=(0,28,21)189, id=DarkGreen
+2. TyrianPurple: pos=(0,20), color=(81,0,16)259, id=TyrianPurple
+3. LuckyPoint: pos=(20,20), color=(38,39,76)424, id=LuckyPoint
+4. Sangria: pos=(2,12), color=(145,0,14)449, id=Sangria
+5. VenetianRed: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+6. FreeSpeechRed: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+7. BlueLagoon: pos=(11,10), color=(0,101,130)736, id=BlueLagoon
+8. GreyAsparagus: pos=(25,10), color=(69,84,65)776, id=GreyAsparagus
+9. Red: pos=(20,0), color=(249,8,0)795, id=Red
+10. CopperRust: pos=(12,4), color=(145,72,79)946, id=CopperRust
+11. FernGreen: pos=(15,6), color=(62,124,64)994, id=FernGreen
+12. Olive: pos=(6,0), color=(117,117,0)1053, id=Olive
+13. Malachite: pos=(0,0), color=(0,211,105)1371, id=Malachite
+14. Bouquet: pos=(8,24), color=(170,133,146)1454, id=Bouquet
+> find_beacons TyrianPurple
+Beacon:
+  TyrianPurple: pos=(0,20), color=(81,0,16)259, id=TyrianPurple
+> find_beacons FreeSpeechRed
+Beacon:
+  FreeSpeechRed: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+> read "bigger-lightbeams.txt"
+** Commands from 'bigger-lightbeams.txt'
+> add_lightbeam Malachite Olive 
+Added lightbeam: Malachite -> Olive
+> add_lightbeam Olive DarkGreen 
+Added lightbeam: Olive -> DarkGreen
+> add_lightbeam Red DarkGreen 
+Added lightbeam: Red -> DarkGreen
+> add_lightbeam DarkGreen VenetianRed 
+Added lightbeam: DarkGreen -> VenetianRed
+> add_lightbeam FernGreen CopperRust 
+Added lightbeam: FernGreen -> CopperRust
+> add_lightbeam CopperRust BlueLagoon 
+Added lightbeam: CopperRust -> BlueLagoon
+> add_lightbeam VenetianRed FreeSpeechRed 
+Added lightbeam: VenetianRed -> FreeSpeechRed
+> add_lightbeam TyrianPurple Sangria 
+Added lightbeam: TyrianPurple -> Sangria
+> add_lightbeam Sangria FreeSpeechRed 
+Added lightbeam: Sangria -> FreeSpeechRed
+> add_lightbeam FreeSpeechRed BlueLagoon 
+Added lightbeam: FreeSpeechRed -> BlueLagoon
+> add_lightbeam GreyAsparagus LuckyPoint 
+Added lightbeam: GreyAsparagus -> LuckyPoint
+> add_lightbeam LuckyPoint Bouquet 
+Added lightbeam: LuckyPoint -> Bouquet
+> # add_lightbeam BlueLagoon Bouquet 
+> 
+** End of commands from 'bigger-lightbeams.txt'
+> lightsources FreeSpeechRed
+beacons:
+1. Sangria: pos=(2,12), color=(145,0,14)449, id=Sangria
+2. VenetianRed: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> lightsources Red
+No lightsources!
+> lightsources NoColor
+Failed (NO_BEACON returned)!
+> path_outbeam GreyAsparagus
+beacons:
+1. GreyAsparagus: pos=(25,10), color=(69,84,65)776, id=GreyAsparagus
+2. LuckyPoint: pos=(20,20), color=(38,39,76)424, id=LuckyPoint
+3. Bouquet: pos=(8,24), color=(170,133,146)1454, id=Bouquet
+> path_outbeam Red
+beacons:
+1. Red: pos=(20,0), color=(249,8,0)795, id=Red
+2. DarkGreen: pos=(9,2), color=(0,28,21)189, id=DarkGreen
+3. VenetianRed: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+4. FreeSpeechRed: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+5. BlueLagoon: pos=(11,10), color=(0,101,130)736, id=BlueLagoon
+> path_outbeam Bouquet
+Beacon:
+  Bouquet: pos=(8,24), color=(170,133,146)1454, id=Bouquet
+> path_outbeam TyrianPurple
+beacons:
+1. TyrianPurple: pos=(0,20), color=(81,0,16)259, id=TyrianPurple
+2. Sangria: pos=(2,12), color=(145,0,14)449, id=Sangria
+3. FreeSpeechRed: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+4. BlueLagoon: pos=(11,10), color=(0,101,130)736, id=BlueLagoon
+> change_name FreeSpeechRed Red
+Beacon:
+  Red: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+> change_name VenetianRed Red
+Beacon:
+  Red: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> find_beacons Red
+Beacons:
+1. Red: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+2. Red: pos=(20,0), color=(249,8,0)795, id=Red
+3. Red: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> find_beacons FreeSpeechRed
+Failed (NO_BEACON returned)!
+> change_name VenetianRed CopperRust
+Beacon:
+  CopperRust: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> find_beacons Red
+Beacons:
+1. Red: pos=(4,8), color=(170,25,0)660, id=FreeSpeechRed
+2. Red: pos=(20,0), color=(249,8,0)795, id=Red
+> find_beacons CopperRust
+Beacons:
+1. CopperRust: pos=(12,4), color=(145,72,79)946, id=CopperRust
+2. CopperRust: pos=(1,6), color=(193,0,35)614, id=VenetianRed
+> 
